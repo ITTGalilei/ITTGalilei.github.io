@@ -1,38 +1,87 @@
+body {
+    background: url("./img/Decathlon.jpg") no-repeat;
+    background-size: 100%;
+    background-size: cover;
+}
+
 .menu1 {
-    background-color: yellow;
     display: flex;
     justify-content: center;
-    text-shadow: 2px 4px 10px red;
+    position: relative;
+    left: 760px;
+    right: 760px;
+    height: 80px;
+	width: 400px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
 }
-.menu1 h1 {
-	font-family: "Kanit", sans-serif;
-  	font-weight: 900;
-  	font-style: italic;
+.menu1 img {
+    box-shadow: 2px 4px 2px black;
+    height: 60px;
+    margin-top: 10px;
 }
+.menu1 img:hover {
+    animation-name: Logo;
+    animation-duration: 0.8s;
+    animation-iteration-count: infinite;
+}
+
 .menu1 h3 {
-    margin-left: 20px;
-    text-shadow: 1px 2px 5px red;
+    margin-left: 8px;
+    margin-top: 10px;
+    box-shadow: 2px 4px 2px black;
     font-family: "Kanit", sans-serif;
   	font-weight: 800;
-  	font-style: italic;
+    background-color: #0083c6;
+    height: 28px;
+	width: 90px;
+    padding-left: 4px;
+    color: white;
 }
+.menu1 h3:hover {
+    animation-name: Logo;
+    animation-duration: 0.8s;
+    animation-iteration-count: infinite;
+}
+
 .menu2 {
-    background-color: rgb(114, 114, 10);
+    border-radius: 10px;
     display: flex;
     justify-content: center;
+    backdrop-filter: blur(20px);
+    height: auto;
+	width: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    margin-bottom: 10px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
 }
 .menu2 h3 {
     margin-left: auto;
     margin-right: auto;
     font-size: 30px;
-    text-shadow: 1px 2px 5px red;
+    text-shadow: 1px 2px 5px black;
     font-family: "Kanit", sans-serif;
   	font-weight: 300;
   	font-style: italic;
+    color: white;
 }
 .menu2 h3:hover {
     text-shadow: 3px 5px 6px green;
     text-decoration: underline;
-    background-color: rgb(187, 187, 47);;
     cursor: pointer;
+}
+
+@keyframes Logo {
+    from {
+        box-shadow: 2px 4px 2px black;
+    } 50% {
+        box-shadow: 0px 0px 0px black;
+    } to {
+        box-shadow: 2px 4px 2px black;
+    }
 }
