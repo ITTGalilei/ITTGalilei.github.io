@@ -1,5 +1,6 @@
 body {
-    background: url("./img/Decathlon.jpg") no-repeat;
+    background-color: rgba(200, 255, 255, 1);
+    /*background: url("./img/Decathlon.jpg") no-repeat;*/
     background-size: 100%;
     background-size: cover;
 }
@@ -27,6 +28,7 @@ body {
 }
 .menu1 img:hover {
     box-shadow: 0px 0px 0px black;
+    cursor: pointer;
 }
 
 .menu1 h3 {
@@ -67,9 +69,16 @@ body {
   	font-weight: 300;
   	font-style: italic;
     color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    background-color: #0083c6;
+    box-shadow: 1px 1px 5px black;
+    border-radius: 6px;
 }
 .menu2 h3:hover {
-    text-shadow: 3px 5px 6px green;
+    text-shadow: 4px 2px 6px black;
     text-decoration: underline;
     cursor: pointer;
 }

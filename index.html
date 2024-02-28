@@ -1,26 +1,46 @@
 <!DOCTYPE html>
-<html lang="it">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Naothlon | home</title>
-  <style>
-		@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-	</style>
-  <link rel="stylesheet" href="style.css">
-  <script src="main.js"></script>
-</head>
-<body>
-  <div class="home">
-    <div class="menu1">
-      <img src="./img/Naothlon.png">
-      <h3>ITTGalilei</h3>
-    </div>
-    <div class="menu2">
-      <h3>chi siamo?</h3>
-      <h3>cosa realiziamo?</h3>
-      <h3>collaboratori</h3>
-    </div>
-  </div>
-</body>
+<html>
+    <head>
+        <title>Naothlon</title>
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="./src/styles/main.css"/>
+
+        <!--Favicon-->
+        <link rel="icon" type="image/x-icon" href="img/Naothlon.jpg">
+    </head>
+    <body>
+        <div id="page-container">
+
+            <div id="title">
+                NAOTHLON <hr/><h3>ITTGalilei</h3> <hr/>
+                <hr/>
+                <a href="menu.html">
+                    <div class="ui blue button">
+                        Scopri di più
+                    </div>
+                </a>
+            </div>
+
+            
+
+        </div>
+
+         <script src="./src/scripts/classes/Utilities.js"></script>
+         <script src="./src/scripts/classes/Parentable.js"></script>
+         <script src="./src/scripts/classes/Physical.js"></script>
+         <script src="./src/scripts/classes/Colorable.js"></script>
+         <script src="./src/scripts/classes/ColorablePhysical.js"></script>
+ 
+         <script src="./src/scripts/background/BackgroundAnimationHome.js"></script>
+         <script src="./src/scripts/background/Smoke.js"></script>
+
+        <script src="./src/scripts/fourier/FourierAnimation.js"></script>
+        <script src="./src/scripts/fourier/EpiCycle.js"></script>
+        <script src="./src/scripts/fourier/data.js"></script>
+
+
+        <script src="./src/scripts/home.js"></script>
+    </body>
 </html>
