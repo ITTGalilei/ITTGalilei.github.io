@@ -1,8 +1,10 @@
 body {
-    background-color: rgba(200, 255, 255, 1);
+    background-color: rgb(158, 228, 228);
     /*background: url("./img/Decathlon.jpg") no-repeat;*/
     background-size: 100%;
     background-size: cover;
+    padding: 0px;
+    margin: 0px;
 }
 
 .menu1 {
@@ -21,9 +23,6 @@ body {
     border-radius: 10px;
     margin-bottom: 10px;
     backdrop-filter: blur(20px);
-    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
-    background: transparent;
-    border: 2px solid rgba(255, 255, 255, .2);
 }
 .menu1 img {
     box-shadow: 2px 4px 2px black;
@@ -67,7 +66,7 @@ body {
 	width: auto;
     box-shadow: 0 0 10px rgba(0, 0, 0, .2);
     margin-bottom: 10px;
-    background: transparent;
+    background-color: rgb(156, 235, 235);
     border: 2px solid rgba(255, 255, 255, .2);
 }
 .menu2 h3 {
@@ -91,4 +90,43 @@ body {
     text-shadow: 4px 2px 6px black;
     text-decoration: underline;
     cursor: pointer;
+}
+.text {
+    border-radius: 15px;
+    background-color: rgb(152, 243, 243);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    border: 5px dashed rgb(93, 190, 190);;
+    margin-left: 600px;
+    margin-right: 600px;
+}
+.textcontent {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+.textcontent h1 {
+    background-color: #0083c6;
+    box-shadow: 1px 1px 5px black;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 40px;
+    font-family: "Kanit", sans-serif;
+  	font-weight: 800;
+    text-shadow: 2px 2px 3px black;
+    color: white;
+}
+.textcontent p {
+    text-align: justify;
+    font-size: 20px;
+    font-family: "Kanit", sans-serif;
+  	font-weight: 300;
+    color: black;
+}
+.textcontent li {
+    text-align: justify;
+    font-size: 17px;
+    font-family: "Kanit", sans-serif;
+  	font-weight: 300;
+    color: black;
 }
