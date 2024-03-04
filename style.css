@@ -6,6 +6,11 @@ body {
 }
 
 .menu1 {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     display: flex;
     justify-content: center;
     position: relative;
@@ -49,6 +54,11 @@ body {
 }
 
 .menu2 {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     border-radius: 10px;
     display: flex;
     justify-content: center;
