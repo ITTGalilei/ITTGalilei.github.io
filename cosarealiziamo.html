@@ -23,7 +23,7 @@
     </div>
     <div class="menu2">
       <h3 onclick="cosarealiziamo()">cosa realiziamo?</h3>
-      <h3 onclick="collaboratori()">collaboratori</h3>
+      <h3 onclick="collaboratori()">collaborazioni</h3>
     </div>
   </div>
   <div class="text">
@@ -122,24 +122,39 @@
           Per fare funzionare correttamente il nostro programma era necessario collegare l’Arduino
           e il Nao ad un router affinchè potessero accedere al wifi per collegarsi al sito della Decathlon
           così da poter accedere al catalogo dei prodotti.
+
           La problematica che abbiamo riscontrato è stata quando abbiamo cercato di collegare il Nao
           e l’Arduino ad un router esterno, i due si collegavano correttamente, invece quando provavamo
           a collegarli all’hotspot del pc il nao si collegava e funzionava correttamente mentre invece l’arduino non dava segni di rilevamento.
+          
           <br><br>
         <li><b>NAO in lingua italiana</b></li>
-          Mentre stavamo sperimentando col Nao, abbiamo riscontrato un problema che, successivamente,
-          abbiamo scoperto non fosse dovuto a noi ma all’assistenza del Nao. Questo problema consisteva nel
-          fatto che il nao non riusciva più a collegarsi al cloud dal quale prendeva le informazioni e così
-          non riusciva più a eseguire certe funzionalità come parlare in lingua italiana.
-          L’assistenza del Nao non è riuscita a risolvere questa problematica riguardante il collegamento al Nao
-          con l’ icloud che gli permetteva di scaricare le funzioni base per il funzionamento, di conseguenza ci
-          siamo adattati e abbiamo creato l’intero progetto in lingua inglese, tra l’altro questa scelta è stata
-          fatta anche in base al fatto che la decathlon non è una catena unicamente italiana, di conseguenza per
-          coinvolgere più persone lo abbiamo progettato e creato in lingua inglese.   
+        Mentre stavamo sperimentando col Nao, abbiamo riscontrato un problema che, successivamente,
+        abbiamo scoperto non fosse dovuto a noi ma all’assistenza del Nao.
+        Questo problema consisteva nel fatto che il nao non riusciva più a collegarsi al cloud dal quale prendeva
+        le informazioni e così non riusciva più a eseguire certe funzionalità come parlare in lingua italiana.
+
+        L’assistenza del Nao non è riuscita a risolvere questa problematica riguardante il collegamento al Nao con
+        l’ icloud che gli permetteva di scaricare le funzioni base per il funzionamento, di conseguenza ci siamo adattati e
+        abbiamo creato l’intero progetto in lingua inglese, tra l’altro questa scelta è stata fatta anche in base al fatto
+        che la decathlon non è una catena unicamente italiana, di conseguenza per coinvolgere più persone lo abbiamo progettato e creato in lingua inglese.              
           <br><br>
         <li><b>Lettore RFID</b></li>
+        Abbiamo riscontrato una problematica riguardante il le tessere che venivano lette dal lettore RFID ovvero,
+        dato che ad ogni tessera corrispondeva un nome era molto difficile programmare il robot Nao a dire il nome della persona corrispondente alla tessera
+        di conseguenza per risolvere tutto ciò abbiamo anche qui implementato un database il quale, deve ricevere
+        dall’arduino il codice della tessera e confrontare il codice con il nome presente nel data base e mandare
+        un segnale al Nao inviandogli il nome della persona.
         <br><br>
         <li><b>Blocco choregraphe socket python</b></li>
+        <br><br>
+        <li><b>Stagioni</b></li>
+        Mentre stavamo lavorando al nostro progetto ci siamo accorti di una problematica a cui non avevamo pensato ovvero,
+        ad ogni stagione che passa cambia la dispozione degli articoli all’interno del negozio di conseguenza bisognava
+        trovare una soluzione per poter aggiornare facilmente il nostro programma a questa evenienza per risolvere tutto
+        ciò abbiamo collegato il Nao ad un raspberry sul quale abbiamo creato un database, tramite quest’ultimo abbiamo
+        reso così più semplice aggiornare le corsie dato che la foto che mostrava come accederci rimaneva invariata per ogni
+        corsia e veniva aggiornato solo il suo nome in base agli articoli che venivano riposti all’interno della corsia.
         <br><br>
         <img src="./img/tcpip.png" width="250px">
       </p>
@@ -152,19 +167,22 @@
         Come funziona il nostro progetto?
       </h1>
       <p>
-        Per il funzionamento del progetto da noi realizzato, sono utilizzati quattro elementi, il robot Nao, un arduino(nano??), un monitor e una (CARTA rFID??).
-        Il cliente entrante nel negozio una volta passate le due (bariere magiche??) se ha già fatto la registrazione e dunque possiede la
-        (carta rfid), verrà riconosciuto dal Nao sennò no.
+        Per il funzionamento del progetto abbiamo utilizzato oltre al NAO, un arduino (nano??) collegato ad un raspberry Pi che fa da DataBase e da monito e una carta rfid.
+        Il cliente entrante nel negozio una volta passate le due (barriere magiche?? di 5° livello)
+        se ha già fatto la registrazione e dunque possiede la carta rfid, verrà riconosciuto dal Nao e tramite il Raspberry verrà comunicato al NAO il nome del cliente.
         <li><b>Il cliente non è registrato</b></li>
-        se dunque il cliente non possiede la (carta rfid??) quando si avvicinerà al Nao questo lo inviterà
-        a recarsi presso il punto accoglienza nel quale potrà registrarsi e ottenere così la (carta rfid) a suo nome
+        se dunque il cliente non possiede la carta rfid quando si avvicinerà al Nao
+        questo lo inviterà a recarsi presso il punto accoglienza nel quale potrà registrarsi
+        e ottenere così la (carta rfid) a suo nome.
         <br><br>
         <li><b>Il cliente è già registrato</b></li>
-        se invece il cliente è già venuto in  negozio e dunque possiede già la (carta rfid), una volta superate le (bariere magiche),
-        queste riconosceranno la tessera e dunque manderanno un segnale al Nao il quale accoglierà il cliente chiamandolo per nome e
-        chiedendogli cosa desidera cercare all’interno del negozio, il cliente dunque risponderà al Nao comunicandogli il prodotto desiderato
-        e così se è presente in negozio, il robot mostrerà su un monito una mappa del negozio con delle freccie che indicherannò la strada per
-        raggiungere il punto in cui è presente l’articolo desiderato(aggiungere se manca)
+        se invece il cliente è già venuto in  negozio e dunque possiede già la carta rfid,
+        una volta superate le (barriere magiche), queste riconosceranno la tessera e dunque,
+        tramite l’arduino e il Raspberry, manderanno un segnale al Nao il quale accoglierà il cliente
+        chiamandolo per nome e chiedendogli cosa desidera cercare all’interno del negozio, il cliente
+        dunque risponderà al Nao comunicandogli il prodotto desiderato e se è presente in negozio,
+        il robot mostrerà su un monito una mappa del negozio con delle frecce che indicheranno la
+        strada per raggiungere il punto in cui è presente l’articolo desiderato.
         <br><br>
       </p>
     </div>
