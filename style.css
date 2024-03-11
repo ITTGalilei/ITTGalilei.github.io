@@ -14,10 +14,9 @@ body {
     -ms-user-select: none;
     user-select: none;
     display: flex;
-    justify-content: center;
     position: relative;
-    left: 760px;
-    right: 760px;
+    left: 45%;
+    right: 45%;
     height: 80px;
 	width: 400px;
     border-radius: 10px;
@@ -96,8 +95,8 @@ body {
     background-color: rgb(152, 243, 243);
     box-shadow: 0 0 10px rgba(0, 0, 0, .2);
     border: 5px dashed rgb(93, 190, 190);;
-    margin-left: 600px;
-    margin-right: 600px;
+    margin-left: 15%;
+    margin-right: 15%;
     margin-bottom: 50px;
 }
 .obiettivotext {
